@@ -5,41 +5,40 @@
       box-sizing: border-box;
     }
 
-    body {
-      background-image: url('../pics/plp.gif');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      margin: 0;
-      padding: 0;
-      min-height: 120vh; /* Ensure body takes full viewport height */
-    }
+   body {
+    margin: 0;
+    padding: 0;
+  }
 
-    .welcome-banner {
-      text-align: center;
-      color: white;
-      border-radius: 0 0 8px 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding-right: 20px;
-      padding-left: 20px;
-      margin: 60px auto 40px;
-    }
+  .welcome-banner {
+    background-image: url('../pics/PLP-GIF2.gif');
+    background-size: cover;        
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 60px 20px;            
+    margin-top: -27px;
+
+  }
 
     .welcome-banner h2 {
       font-family: 'Outfit', sans-serif;
       font-size: 70px;
-      margin-bottom: 0.25rem;
+      margin: 10px;
     }
 
     .welcome-banner p {
       font-family: 'Outfit', sans-serif;
       font-size: 30px;
-      margin: 0;
+      margin: 10px;
     }
 
     .container {
       max-width: 1550px;
-      margin: 80px auto 40px;
+      margin: 30px auto 40px;
       overflow: hidden;
     }
 
@@ -96,13 +95,21 @@
     }
 
     
+    footer {
+        background-color: #004d00;
+        color: white;
+        text-align: center;
+        padding: 1px;
+        margin-top: auto;
+    }
+    
     .about-section {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 60px;
       max-width: 1400px;
-      margin: 50px;
+      margin: 30px auto;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
       padding: 50px;
@@ -154,4 +161,131 @@
     .about-text a:hover {
       text-decoration: underline;
       color: #0b4d2e;
+    }
+
+    /* CSS SLIDER */
+    .slider-accordion-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 1400px;
+        margin: 30px auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        padding: 50px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .slider-container {
+      flex: 0 0 70%;           /* make it smaller — adjust between 50%–65% */
+      max-width: 50%;          /* ensure it never grows beyond 60% */
+      overflow-x: auto;         /* allows horizontal scroll */
+      white-space: nowrap;      /* keeps logos in one line */
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+ 
+    }
+
+    
+    .slider-container h2 {
+      font-size: 55px;
+      color: darkgreen;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .college-slider-container {
+      width: 75%;           /* keeps the slider from taking full width */
+      overflow-x: auto;      /* allows scrolling if logos overflow */
+      white-space: nowrap;   /* keeps logos on one line */
+      display: inline-block;
+      vertical-align: top;
+      padding: 10px;
+    }
+
+    .college-logos {
+      display: flex;
+      overflow: hidden;
+      scroll-behavior: smooth;
+      gap: 10px;
+      padding: 10px;
+      margin-bottom: 25px;
+    
+    }
+
+    .logo {
+      flex: 0 0 auto;
+      text-align: center;
+    }
+
+    .logo img {
+      width: 200px;  /* smaller logo size */
+      height: 200px; /* keeps square look */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      object-fit: contain; /* keeps logos from stretching */
+      background: white; /* optional: clean background for logos */
+      padding: 10px;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    .logo p {
+      font-weight: 600;
+      color: darkgreen;
+      margin-top: 10px;
+        font-size: 13px;
+    }
+
+    #slider {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+     /* CSS ACCORDION */
+    .accordion-container {
+      width: 60%;
+      margin: 40px auto;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .accordion-container h3 {
+      background-color: #004d00;
+      color: white;
+      cursor: pointer;
+      padding: 14px 18px;
+      margin: 0;
+      border-top: 1px solid #ccc;
+      transition: background-color 0.3s;
+      position: relative;
+    }
+
+    .accordion-container h3::after {
+      content: '+';
+      position: absolute;
+      right: 18px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+
+    .accordion-container h3.active::after {
+      content: '-';
+    }
+
+    .accordion-container h3:hover {
+      background-color: #006600;
+    }
+
+    .accordion-container div {
+      padding: 15px 18px;
+      display: none;
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-top: none;
     }

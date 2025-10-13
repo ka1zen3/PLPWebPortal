@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PLP Portal</title>
   <link rel="stylesheet" href="css/main-style.css" />
-  <link rel="icon" type="image/png" href="plp-logo.png">
+  <link rel="icon" type="image/png" href="pics/plp-logo.png">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
   <style>
 
   </style>
@@ -46,11 +49,101 @@
     </p>
     <p>
       Founded in 1990, the school continues to innovate in teaching methods and maintain a supportive community. 
-      <a href="#">Learn more about our mission.</a>
+      <a href="AboutUs.html">Learn more about our mission.</a>
     </p>
   </div>
+
 </section>
 
+
+<div class="slider-accordion-container">
+  <div class="slider-container">
+    <h2>Our Colleges</h2>
+      <div class="college-slider-container">
+        <div class="college-logos" id="logoContainer">
+          <div class="logo"><img src="pics/ccs.png" alt="CCS"><p>Computer Studies</p></div>
+          <div class="logo"><img src="pics/coed.png" alt="COED"><p>Education</p></div>
+          <div class="logo"><img src="pics/conn.png" alt="CONN"><p>Nursing</p></div>
+          <div class="logo"><img src="pics/cas.png" alt="CAS"><p>Arts & Sciences</p></div>
+          <div class="logo"><img src="pics/cba.png" alt="CBA"><p>Business & Accountancy</p></div>
+          <div class="logo"><img src="pics/coe.png" alt="COE"><p>Engineering</p></div>
+          <div class="logo"><img src="pics/cihm.png" alt="CIHM"><p>Hospitality Management</p></div>
+        </div>
+        <div id="slider"></div>
+      </div>
+  </div>
+
+   <div class="accordion-container">
+      <h3>College of Computer Studies (CCS)</h3>
+      <div>
+        <p>The College of Computer Studies delivers advanced education in information technology and computer science. Its curriculum focuses on software engineering, data systems, and emerging technologies. The college produces skilled graduates ready for professional roles in the technology sector.</p>
+      </div>
+
+      <h3>College of Education (COED)</h3>
+      <div>
+        <p>The College of Education prepares students for professional careers in teaching and educational leadership. Its programs emphasize pedagogical theory, research, and practical application. The college develops educators who are committed to academic excellence and lifelong learning.</p>
+      </div>
+
+      <h3>College of Nursing (CON)</h3>
+      <div>
+        <p>The College of Nursing provides a scientific and ethical foundation for professional nursing practice. It emphasizes evidence-based patient care and clinical decision-making. The college prepares competent nurses for diverse healthcare environments.</p>
+      </div>
+
+      <h3>College of Arts & Sciences (CAS)</h3>
+      <div>
+        <p>The College of Arts and Sciences provides the core liberal arts and sciences education for the university. It cultivates essential skills in critical analysis, research, and communication. This college forms the foundational preparation for advanced study and professional life.</p>
+      </div>
+
+      <h3>College of Business & Accountancy (CBA)</h3>
+      <div>
+        <p>The College of Business and Accountancy educates students in business principles and financial management. It focuses on strategic analysis, entrepreneurship, and ethical accounting practices. The college prepares graduates for leadership in corporate and commercial fields.</p>
+      </div>
+
+      <h3>College of Engineering (COE)</h3>
+      <div>
+        <p>The College of Engineering educates students in the principles and applications of engineering. The curriculum develops proficiency in designing and managing complex technological systems. It produces engineers equipped to address industrial and infrastructural challenges.</p>
+      </div>
+
+      <h3>College of International Hospitality Management (CIHM)</h3>
+      <div>
+        <p>The College of International Hospitality Management specializes in global tourism and service leadership. Its programs integrate management theory with operational competencies for the hospitality industry. The college develops professionals capable of managing high-standard service enterprises.</p>
+      </div>
+    </div> 
+</div>
+
+    <footer>
+        <p>&copy; 2023 Pamantasan ng Lungsod ng Pasig. All Rights Reserved.</p>
+    </footer>
+
+<script>
+  $(function() {
+    const $container = $("#logoContainer");
+    const logoWidth = 240; // image + margin space
+    const totalLogos = $container.children().length;
+    const visibleWidth = $container.outerWidth();
+    const maxScroll = (totalLogos * logoWidth) - visibleWidth;
+
+    $("#slider").slider({
+      min: 0,
+      max: maxScroll,
+      value: 0,
+      slide: function(event, ui) {
+        $container.scrollLeft(ui.value);
+      }
+    });
+  });
+</script>
+
+<script>
+$(document).ready(function() {
+  $(".accordion-container h3").click(function() {
+    // close others
+    $(".accordion-container div").not($(this).next()).slideUp();
+    // toggle this one
+    $(this).next().slideToggle();
+  });
+});
+</script>
 
 </body>
 </html>
