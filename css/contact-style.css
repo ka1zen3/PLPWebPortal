@@ -1,0 +1,96 @@
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+    * {
+      font-family: 'Outfit', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('../pics/plp.gif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      min-height: 120vh; /* Ensure body takes full viewport height */
+    }
+
+    .welcome-banner {
+      text-align: center;
+      color: white;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding-right: 20px;
+      padding-left: 20px;
+      margin: 60px auto 40px;
+    }
+
+    .welcome-banner h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 70px;
+      margin-bottom: 0.25rem;
+    }
+
+    .welcome-banner p {
+      font-family: 'Outfit', sans-serif;
+      font-size: 30px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1550px;
+      margin: 80px auto 40px;
+      overflow: hidden;
+    }
+
+    .header {
+    background-color: darkgreen;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    section nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 0 10px black;
+      z-index: 1000;
+      padding: 15px 0;
+    }
+
+    section nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+
+    section nav ul li {
+      margin: 0 20px;
+    }
+
+    section nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      font-size: 17px;
+      transition: 0.2s;
+    }
+
+    section nav ul li a:hover {
+      color: #0066cc;
+    }
+
+    body {
+      margin-top: 80px;
+    }
