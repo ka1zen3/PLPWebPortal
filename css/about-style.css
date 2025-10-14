@@ -10,7 +10,6 @@ body {
   padding: 0;
 }
 
-
 .welcome-banner {
   background-image: url("../pics/PLP-GIF2.gif");
   background-size: cover;
@@ -157,7 +156,6 @@ footer {
   padding: 20px;
 }
 
-/* Adjust each box */
 .mv-section,
 .history-section {
   margin: 0;

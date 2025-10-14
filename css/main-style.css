@@ -233,6 +233,7 @@ footer {
   border-radius: 12px;
   padding: 50px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 .slider-container {
@@ -302,9 +303,15 @@ footer {
   margin: 0 auto;
 }
 
+.accordion-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 60%; /* Match accordion width */
+}
+
 .accordion-container {
-  width: 60%;
-  margin: 40px auto;
+  width: 100%; /* Take full width of wrapper */
+  margin: 0 auto; /* Remove top margin since wrapper handles spacing */
   font-family: "Outfit", sans-serif;
 }
 
@@ -342,6 +349,44 @@ footer {
   background: #f9f9f9;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+.explore-button-container {
+  width: 100%; /* Match accordion width */
+  text-align: center;
+  margin-top: 30px; /* Space between accordion and button */
+  padding-top: 25px;
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: darkgreen;
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 100, 0, 0.2);
+}
+
+.explore-btn:hover {
+  background: #006400;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 100, 0, 0.3);
+  gap: 15px;
+}
+
+.explore-btn i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.explore-btn:hover i {
+  transform: translateX(3px);
 }
 
 .news-section {

@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-banner {
+  background-image: url("../pics/PLP-GIF2.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px;
+}
+
+section nav {
+  display: flex;
+  justify-content: space-between; /* Changed from center */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 10px black;
+  z-index: 1000;
+  padding: 10px 50px; /* Adjusted padding */
+}
+
+.nav-logo img {
+  height: 70px; /* Adjust based on your logo size */
+  width: auto;
+}
+
+section nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+section nav ul li {
+  margin: 0 20px;
+}
+
+section nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.2s;
+  position: relative;
+  padding: 5px 0;
+}
+
+section nav ul li a:hover {
+  color:#004d00;
+}
+
+section nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:#004d00;
+  transition: width 0.3s ease;
+}
+
+section nav ul li a:hover::after {
+  width: 100%;
+}
+
+section nav ul li a.active {
+  color:#004d00;
+}
+
+section nav ul li a.active::after {
+  width: 100%;
+}
+
+.nav-social {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  color: #000;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: darkgreen;
+}
+
+body {
+  margin-top: 80px;
+}
+
+.welcome-banner h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 70px;
+  margin: 10px;
+}
+
+.welcome-banner p {
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.container {
+  max-width: 1550px;
+  margin: 30px auto 40px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: darkgreen;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+footer {
+  background-color: #004d00;
+  color: white;
+  text-align: center;
+  padding: 1px;
+  margin-top: auto;
+}
+
+.departments-section {
+  padding: 60px 20px;
+  margin-top: -100px
+}
+
+.departments-section h2 {
+  text-align: center;
+  color: darkgreen;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.departments-section h5 {
+    font-size: 1.1rem;
+    color:black;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    margin-top: -20px;
+}
+
+#departments-accordion {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+#departments-accordion .ui-accordion-header {
+  background: darkgreen;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  transition: background 0.3s ease;
+  border-bottom: none;
+}
+
+#departments-accordion .ui-accordion-header:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#departments-accordion .ui-accordion-header:hover {
+  background: #006400;
+}
+
+#departments-accordion .ui-accordion-header-active {
+  background: #004d00;
+}
+
+#departments-accordion .ui-accordion-content {
+  background: white;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+#departments-accordion .ui-accordion-header::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#departments-accordion .ui-accordion-header-active::after {
+  content: "-";
+}
+
+/* Fix focus states */
+#departments-accordion .ui-accordion-header:focus,
+#departments-accordion .ui-accordion-header.ui-state-focus {
+  background: darkgreen;
+  color: white;
+  outline: none;
+  border: 1px solid darkgreen;
+}
+
+/* Department Content */
+.department-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.dept-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.dept-info h4 {
+  color: darkgreen;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.dept-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Department Tabs */
+.dept-tabs {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.dept-tabs .ui-tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: #004d00;
+  padding: 20px 0;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.dept-tabs .ui-tabs-nav li {
+  list-style: none;
+}
+
+.dept-tabs .ui-tabs-nav li a {
+  font-size: 18px;
+  color: #004d00;
+  font-weight: 600;
+  padding: 12px 25px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.dept-tabs .ui-tabs-nav li a:hover,
+.dept-tabs .ui-tabs-nav li.ui-tabs-active a,
+.dept-tabs .ui-tabs-nav li a:focus,
+.dept-tabs .ui-tabs-nav li.ui-state-focus a {
+  background-color: khaki;
+  color: black;
+  transform: scale(1.05);
+  outline: none;
+}
+
+.dept-tabs .ui-tabs-panel {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+  font-weight: 400;
+  text-align: justify;
+  border-radius: 8px;
+}
+
+.dept-tabs .ui-tabs-panel h4 {
+  color: darkgreen;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.programs-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.programs-list li {
+  padding: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 20px;
+}
+
+.programs-list li:before {
+  content: "•";
+  color: darkgreen;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+}
+
+#departments-accordion .ui-accordion-header {
+    border-bottom: none !important;
+    margin: 0 !important;
+}
+
+#departments-accordion .ui-accordion-header:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+#departments-accordion .ui-accordion-header-active {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
