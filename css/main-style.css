@@ -1,291 +1,527 @@
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
 
-    * {
-      font-family: 'Outfit', sans-serif;
-      box-sizing: border-box;
-    }
+* {
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+}
 
-   body {
-    margin: 0;
-    padding: 0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+}
 
-  .welcome-banner {
-    background-image: url('../pics/PLP-GIF2.gif');
-    background-size: cover;        
-    background-position: center;
-    background-repeat: no-repeat;
+section nav {
+  display: flex;
+  justify-content: space-between; /* Changed from center */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 10px black;
+  z-index: 1000;
+  padding: 10px 50px; /* Adjusted padding */
+}
+
+.nav-logo img {
+  height: 70px; /* Adjust based on your logo size */
+  width: auto;
+}
+
+section nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+section nav ul li {
+  margin: 0 20px;
+}
+
+section nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.2s;
+  position: relative;
+  padding: 5px 0;
+}
+
+section nav ul li a:hover {
+  color:#004d00;
+}
+
+section nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: darkgreen;
+  transition: width 0.3s ease;
+}
+
+section nav ul li a:hover::after {
+  width: 100%;
+}
+
+section nav ul li a.active {
+  color:#004d00;
+}
+
+section nav ul li a.active::after {
+  width: 100%;
+}
+
+.nav-social {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  color: #000;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: darkgreen;
+}
+
+.welcome-banner {
+  background-image: url("../pics/PLP-GIF2.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px;
+}
+
+.welcome-banner h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 70px;
+  margin: 10px;
+}
+
+.welcome-banner p {
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.container {
+  max-width: 1550px;
+  margin: 30px auto 40px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: darkgreen;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+
+body {
+  margin-top: 80px;
+}
+
+footer {
+  background-color: #004d00;
+  color: white;
+  text-align: center;
+  padding: 1px;
+  margin-top: auto;
+}
+
+/* video ccs keme */
+.video-container {
+  position: relative;
+  width: 100%;
+  margin: 30px auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container iframe {
+  width: 90%;
+  height: 100%;
+  min-height: 450px;
+  display: block;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about-section img {
+  width: 550px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  flex: 1;
+  color: #111;
+}
+
+.about-text h2 {
+  font-size: 55px;
+  font-weight: 700;
+  color: darkgreen;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-text h3 {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: justify;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-text a {
+  color: darkgreen;
+  font-weight: 600;
+  text-decoration: none;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+  color: #0b4d2e;
+}
+
+/* CSS SLIDER */
+.slider-accordion-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.slider-container {
+  flex: 0 0 70%;
+  max-width: 50%;
+  overflow-x: auto;
+  white-space: nowrap;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.slider-container h2 {
+  font-size: 55px;
+  color: darkgreen;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.college-slider-container {
+  width: 75%;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.college-logos {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.logo {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.logo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.logo p {
+  font-weight: 600;
+  color: darkgreen;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* CSS ACCORDION */
+.accordion-container {
+  width: 60%;
+  margin: 40px auto;
+  font-family: "Outfit", sans-serif;
+}
+
+.accordion-container h3 {
+  background-color: #004d00;
+  color: white;
+  cursor: pointer;
+  padding: 14px 18px;
+  margin: 0;
+  border-top: 1px solid #ccc;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.accordion-container h3::after {
+  content: "+";
+  position: absolute;
+  right: 18px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.accordion-container h3.active::after {
+  content: "-";
+}
+
+.accordion-container h3:hover {
+  background-color: #006600;
+}
+
+.accordion-container div {
+  padding: 15px 18px;
+  display: none;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.news-section {
+    padding: 20px 20px;
+    margin-top: -50px;
+}
+
+.news-section h2 {
     text-align: center;
+    color: darkgreen;
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    
+}
+
+.news-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-content h3 {
+    color: darkgreen;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.news-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.news-date {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.read-more {
+    color: darkgreen;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #006400;
+    text-decoration: underline;
+}
+
+/* See More Section */
+.see-more-container {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.see-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    color: darkgreen;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    padding: 10px 25px;
+    border: 2px solid darkgreen;
+    border-radius: 25px;
+    background: white;
+}
+
+.see-more-link:hover {
+    background: darkgreen;
     color: white;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 60px 20px;            
-    margin-top: -27px;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3);
+    gap: 20px;
+}
 
-  }
+.arrow-container {
+    display: flex;
+    gap: 5px;
+}
 
-    .welcome-banner h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 70px;
-      margin: 10px;
-    }
+.arrow-container i {
+    font-size: 14px;
+    animation: slideRight 2s infinite;
+}
 
-    .welcome-banner p {
-      font-family: 'Outfit', sans-serif;
-      font-size: 30px;
-      margin: 10px;
-    }
+.arrow-container i:nth-child(2) {
+    animation-delay: 0.2s;
+}
 
-    .container {
-      max-width: 1550px;
-      margin: 30px auto 40px;
-      overflow: hidden;
-    }
 
-    .header {
-    background-color: darkgreen;
+/* FAQ Section */
+.faq-section {
+    padding: 20px 20px;
+    margin-top: 50px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: darkgreen;
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.faq-accordion h3 {
+    background: darkgreen;
     color: white;
     padding: 20px;
-    text-align: center;
-    }
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0 !important;
+}
 
-    .header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
+.faq-accordion h3:hover {
+    background: #006400;
+}
 
-    section nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      box-shadow: 0 0 10px black;
-      z-index: 1000;
-      padding: 15px 0;
-    }
+.faq-accordion div {
+    background: white;
+    padding: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    border: none;
+    margin: 0 !important;
+}
 
-    section nav ul {
-      list-style: none;
-      display: flex;
-      padding: 0;
-      margin: 0;
-    }
-
-    section nav ul li {
-      margin: 0 20px;
-    }
-
-    section nav ul li a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 500;
-      font-size: 17px;
-      transition: 0.2s;
-    }
-
-    section nav ul li a:hover {
-      color:khaki;
-    }
-
-    body {
-      margin-top: 80px;
-    }
-
-    
-    footer {
-        background-color: #004d00;
-        color: white;
-        text-align: center;
-        padding: 1px;
-        margin-top: auto;
-    }
-    
-    .about-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 60px;
-      max-width: 1400px;
-      margin: 30px auto;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 12px;
-      padding: 50px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .about-section img {
-      width: 550px;
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .about-text {
-      flex: 1;
-      color: #111;
-    }
-
-    .about-text h2 {
-      font-size: 55px;
-      font-weight: 700;
-      color: darkgreen;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    
-    .about-text h3 {
-      font-size: 20px;
-      color: black;
-      text-align: center;
-    }
-
-    .about-text p {
-      font-size: 18px;
-      line-height: 1.8;
-      text-align: justify;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .about-text a {
-      color: darkgreen;
-      font-weight: 600;
-      text-decoration: none;
-      font-style: italic;
-      transition: 0.3s;
-    }
-
-    .about-text a:hover {
-      text-decoration: underline;
-      color: #0b4d2e;
-    }
-
-    /* CSS SLIDER */
-    .slider-accordion-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 40px;
-        max-width: 1400px;
-        margin: 30px auto;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 12px;
-        padding: 50px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .slider-container {
-      flex: 0 0 70%;           /* make it smaller — adjust between 50%–65% */
-      max-width: 50%;          /* ensure it never grows beyond 60% */
-      overflow-x: auto;         /* allows horizontal scroll */
-      white-space: nowrap;      /* keeps logos in one line */
-      text-align: center;
-      padding: 10px;
-      box-sizing: border-box;
- 
-    }
-
-    
-    .slider-container h2 {
-      font-size: 55px;
-      color: darkgreen;
-      font-weight: 700;
-      margin-bottom: 25px;
-    }
-
-    .college-slider-container {
-      width: 75%;           /* keeps the slider from taking full width */
-      overflow-x: auto;      /* allows scrolling if logos overflow */
-      white-space: nowrap;   /* keeps logos on one line */
-      display: inline-block;
-      vertical-align: top;
-      padding: 10px;
-    }
-
-    .college-logos {
-      display: flex;
-      overflow: hidden;
-      scroll-behavior: smooth;
-      gap: 10px;
-      padding: 10px;
-      margin-bottom: 25px;
-    
-    }
-
-    .logo {
-      flex: 0 0 auto;
-      text-align: center;
-    }
-
-    .logo img {
-      width: 200px;  /* smaller logo size */
-      height: 200px; /* keeps square look */
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-      object-fit: contain; /* keeps logos from stretching */
-      background: white; /* optional: clean background for logos */
-      padding: 10px;
-    }
-
-    .logo img:hover {
-      transform: scale(1.1);
-    }
-
-    .logo p {
-      font-weight: 600;
-      color: darkgreen;
-      margin-top: 10px;
-        font-size: 13px;
-    }
-
-    #slider {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-     /* CSS ACCORDION */
-    .accordion-container {
-      width: 60%;
-      margin: 40px auto;
-      font-family: 'Outfit', sans-serif;
-    }
-
-    .accordion-container h3 {
-      background-color: #004d00;
-      color: white;
-      cursor: pointer;
-      padding: 14px 18px;
-      margin: 0;
-      border-top: 1px solid #ccc;
-      transition: background-color 0.3s;
-      position: relative;
-    }
-
-    .accordion-container h3::after {
-      content: '+';
-      position: absolute;
-      right: 18px;
-      font-weight: bold;
-      font-size: 18px;
-      transition: transform 0.3s;
-    }
-
-    .accordion-container h3.active::after {
-      content: '-';
-    }
-
-    .accordion-container h3:hover {
-      background-color: #006600;
-    }
-
-    .accordion-container div {
-      padding: 15px 18px;
-      display: none;
-      background: #f9f9f9;
-      border: 1px solid #ccc;
-      border-top: none;
-    }

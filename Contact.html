@@ -1,42 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact</title>
-  <link rel="stylesheet" href="css/contact-style.css" />
-  <link rel="icon" type="image/png" href="pics/plp-logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact-style.css" />
+    <link rel="icon" type="image/png" href="pics/plp-logo.png" />
+    <linkhref
+      ="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <div class="welcome-banner">
+      <h2>Welcome to the PLP Web Portal</h2>
+      <p>Edukasyon para sa Sarili, Pamilya, at Bayan.</p>
+    </div>
 
-  </style>
-</head>
-<body>
+    <section id="menu">
+      <nav>
+        <div class="nav-logo">
+          <img src="pics/plp-logo.png" alt="PLP Logo" />
+        </div>
 
-<div class="welcome-banner">
-  <h2>Welcome to the PLP Web Portal</h2>
-  <p>Edukasyon para sa Sarili, Pamilya, at Bayan.</p>
-</div>
+        <ul class="nav-center">
+          <li><a href="Home.html" class="nav-link">Home</a></li>
+          <li><a href="AboutUs.html" class="nav-link">About Us</a></li>
+          <li><a href="Contact.html" class="nav-link">Contact</a></li>
+        </ul>
 
-<section id="menu">
-  <nav>
-    <ul>
-      <li><a href="Home.html">Home</a></li>
-      <li><a href="AboutUs.html">About Us</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</section>
+        <div class="nav-social">
+          <a href="#" class="social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </nav>
+    </section>
 
-<div class="container">
-   <div class="header">
-    <h1>Contact Us</h1>
-  </div>
-</div>
+    <div class="container">
+      <div class="header">
+        <h1>Contact Us</h1>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <div class="contact-container">
+        <div class="form-container">
+          <h1>Send Us An Email</h1>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="firstName">Full Name</label>
+              <div class="input-row">
+                <div class="input-field">
+                  <input type="text" id="firstName" placeholder="First Name" />
+                </div>
+                <div class="input-field">
+                  <input type="text" id="lastName" placeholder="Last Name" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="input-row">
+                <div class="input-field">
+                  <input type="email" id="email" placeholder="Email" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactNumber">Contact Number</label>
+              <div class="input-row">
+                <div class="input-field">
+                  <input
+                    type="tel"
+                    id="contactNumber"
+                    placeholder="Phone Number"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <div class="input-row">
+                <div class="input-field">
+                  <input type="text" id="subject" placeholder="Subject" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message (Optional)</label>
+              <textarea
+                id="message"
+                placeholder="Type your message here..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+
+          <div id="messageDialog" title="Message" style="display: none">
+            <p>Thank you for your message! We'll get back to you soon.</p>
+          </div>
+
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <p>2-8643-1014</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p>inquiry@plpasig.edu.ph</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>12-B Alcalde Jose, Pasig, 1600 Metro Manila</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <h2>Get In Touch With Us</h2>
+          <p>
+            We're here to help and answer any questions you might have. We look
+            forward to hearing from you!
+          </p>
+          <p>
+            Our team typically responds within 24 hours during business days.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <footer>
-        <p>&copy; 2023 Pamantasan ng Lungsod ng Pasig. All Rights Reserved.</p>
+      <p>&copy; 2023 Pamantasan ng Lungsod ng Pasig. All Rights Reserved.</p>
     </footer>
+    <script>
+      $(document).ready(function () {
+        $("#messageDialog").dialog({
+          autoOpen: false,
+          modal: true,
+          width: 400,
+          buttons: {
+            OK: function () {
+              $(this).dialog("close");
+            },
+          },
+        });
 
-</body>
+        $(".submit-btn").on("click", function (event) {
+          event.preventDefault();
+          $("#messageDialog").dialog("open");
+        });
+      });
+    </script>
+  </body>
 </html>

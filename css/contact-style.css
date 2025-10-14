@@ -1,104 +1,315 @@
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
 
-    * {
-      font-family: 'Outfit', sans-serif;
-      box-sizing: border-box;
-    }
+* {
+  font-family: 'Outfit', sans-serif;
+  box-sizing: border-box;
+}
 
-   body {
-    margin: 0;
-    padding: 0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 80px;
+  background-color: #f5f5f5;
+}
 
-  .welcome-banner {
-    background-image: url('../pics/PLP-GIF2.gif');
-    background-size: cover;        
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    color: white;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 60px 20px;            
-    margin-top: -27px;
+section nav {
+  display: flex;
+  justify-content: space-between; /* Changed from center */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 10px black;
+  z-index: 1000;
+  padding: 10px 50px; /* Adjusted padding */
+}
 
-  }
+.nav-logo img {
+  height: 70px; /* Adjust based on your logo size */
+  width: auto;
+}
 
-    .welcome-banner h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 70px;
-      margin: 10px;
-    }
+section nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
 
-    .welcome-banner p {
-      font-family: 'Outfit', sans-serif;
-      font-size: 30px;
-      margin: 10px;
-    }
+section nav ul li {
+  margin: 0 20px;
+}
 
-    .container {
-      max-width: 1550px;
-      margin: 30px auto 40px;
-      overflow: hidden;
-    }
+section nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.2s;
+  position: relative;
+  padding: 5px 0;
+}
 
-    .header {
-    background-color: darkgreen;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    }
+section nav ul li a:hover {
+  color:#004d00;
+}
 
-    .header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
+section nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:#004d00;
+  transition: width 0.3s ease;
+}
 
-    section nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      box-shadow: 0 0 10px black;
-      z-index: 1000;
-      padding: 15px 0;
-    }
+section nav ul li a:hover::after {
+  width: 100%;
+}
 
-    section nav ul {
-      list-style: none;
-      display: flex;
-      padding: 0;
-      margin: 0;
-    }
+section nav ul li a.active {
+  color:#004d00;
+}
 
-    section nav ul li {
-      margin: 0 20px;
-    }
+section nav ul li a.active::after {
+  width: 100%;
+}
 
-    section nav ul li a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 500;
-      font-size: 17px;
-      transition: 0.2s;
-    }
+.nav-social {
+  display: flex;
+  gap: 20px;
+}
 
-    section nav ul li a:hover {
-      color: #0066cc;
-    }
+.social-link {
+  color: #000;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
 
-    body {
-      margin-top: 80px;
-    }
+.social-link:hover {
+  color: darkgreen;
+}
 
-    
-    footer {
-        background-color: #004d00;
-        color: white;
-        text-align: center;
-        padding: 1px;
-        margin-top: auto;
-    }
+/* Welcome Banner */
+.welcome-banner {
+  background-image: url('../pics/PLP-GIF2.gif');
+  background-size: cover;        
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 60px 20px;            
+}
+
+.welcome-banner h2 {
+  font-size: 70px;
+  margin: 10px;
+}
+
+.welcome-banner p {
+  font-size: 30px;
+  margin: 10px;
+}
+
+/* Header */
+.header {
+  background-color: darkgreen;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.container {
+  max-width: 1550px;
+  margin: 30px auto 40px;
+  overflow: hidden;
+}
+
+/* Contact Section - UPDATED */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: calc(100vh - 200px);
+  margin-top: -40px;
+}
+
+.contact-container {
+  display: flex;
+  width: 1200px;
+  height: 600px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Form Container - UPDATED (No scroll) */
+.form-container {
+  flex: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: darkgreen;
+  font-size: 24px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.input-field {
+  flex: 1;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: darkgreen;
+  box-shadow: 0 0 0 1px rgba(0, 100, 0, 0.2);
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background-color: #006400;
+}
+
+/* Contact Info - UPDATED */
+.contact-info {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.info-item i {
+  width: 14px;
+  margin-right: 6px;
+  color: darkgreen;
+  font-size: 12px;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 12px;
+}
+.image-container {
+  flex: 1;
+  background-image: url('../pics/plp-contact.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(56, 56, 56, 0.5);
+  z-index: 1;
+} 
+
+.image-container h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  z-index: 2;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for readability */
+}
+
+.image-container p {
+  font-size: 16px;
+  max-width: 80%;
+  line-height: 1.5;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added text shadow for readability */
+}
+
+
+footer {
+  background-color: #004d00;
+  color: white;
+  text-align: center;
+  padding: 1px;
+  margin-top: auto;
+}
