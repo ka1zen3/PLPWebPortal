@@ -93,7 +93,6 @@ section nav ul li a.active::after {
   color: darkgreen;
 }
 
-/* Welcome Banner */
 .welcome-banner {
   background-image: url('../pics/PLP-GIF2.gif');
   background-size: cover;        
@@ -116,7 +115,6 @@ section nav ul li a.active::after {
   margin: 10px;
 }
 
-/* Header */
 .header {
   background-color: darkgreen;
   color: white;
@@ -135,7 +133,6 @@ section nav ul li a.active::after {
   overflow: hidden;
 }
 
-/* Contact Section - UPDATED */
 .contact-section {
   display: flex;
   justify-content: center;
@@ -156,7 +153,6 @@ section nav ul li a.active::after {
   margin: 0 auto;
 }
 
-/* Form Container - UPDATED (No scroll) */
 .form-container {
   flex: 1;
   padding: 25px;
@@ -233,7 +229,6 @@ textarea {
   background-color: #006400;
 }
 
-/* Contact Info - UPDATED */
 .contact-info {
   margin-top: 15px;
   padding-top: 12px;
@@ -292,7 +287,7 @@ textarea {
   margin-bottom: 15px;
   z-index: 2;
   position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .image-container p {
@@ -302,7 +297,7 @@ textarea {
   z-index: 2;
   position: relative;
   margin-bottom: 10px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added text shadow for readability */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 
