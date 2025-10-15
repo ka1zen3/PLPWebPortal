@@ -24,7 +24,7 @@ section nav {
 }
 
 .nav-logo img {
-  height: 70px; 
+  height: 70px;
   width: auto;
 }
 
@@ -306,12 +306,12 @@ footer {
 .accordion-button-wrapper {
   display: flex;
   flex-direction: column;
-  width: 60%; /* Match accordion width */
+  width: 60%; 
 }
 
 .accordion-container {
-  width: 100%; /* Take full width of wrapper */
-  margin: 0 auto; /* Remove top margin since wrapper handles spacing */
+  width: 100%; 
+  margin: 0 auto; 
   font-family: "Outfit", sans-serif;
 }
 
@@ -352,9 +352,9 @@ footer {
 }
 
 .explore-button-container {
-  width: 100%; /* Match accordion width */
+  width: 100%;
   text-align: center;
-  margin-top: 30px; /* Space between accordion and button */
+  margin-top: 30px;
   padding-top: 25px;
 }
 
@@ -545,7 +545,7 @@ footer {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: background 0.3s ease;
-  margin: 0 !important;
+  margin: 0;
 }
 
 .faq-accordion h3:hover {
@@ -559,5 +559,5 @@ footer {
   line-height: 1.6;
   color: #333;
   border: none;
-  margin: 0 !important;
+  margin: 0;
 }

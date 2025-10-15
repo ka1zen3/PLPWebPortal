@@ -176,92 +176,93 @@
         </div>
       </div>
 
-    <div class="accordion-button-wrapper">
-      <div class="accordion-container">
-        <h3>College of Computer Studies (CCS)</h3>
-        <div>
-          <p>
-            The College of Computer Studies delivers advanced education in
-            information technology and computer science. Its curriculum focuses
-            on software engineering, data systems, and emerging technologies.
-            The college produces skilled graduates ready for professional roles
-            in the technology sector.
-          </p>
-        </div>
+      <div class="accordion-button-wrapper">
+        <div class="accordion-container">
+          <h3>College of Computer Studies (CCS)</h3>
+          <div>
+            <p>
+              The College of Computer Studies delivers advanced education in
+              information technology and computer science. Its curriculum
+              focuses on software engineering, data systems, and emerging
+              technologies. The college produces skilled graduates ready for
+              professional roles in the technology sector.
+            </p>
+          </div>
 
-        <h3>College of Education (COED)</h3>
-        <div>
-          <p>
-            The College of Education prepares students for professional careers
-            in teaching and educational leadership. Its programs emphasize
-            pedagogical theory, research, and practical application. The college
-            develops educators who are committed to academic excellence and
-            lifelong learning.
-          </p>
-        </div>
+          <h3>College of Education (COED)</h3>
+          <div>
+            <p>
+              The College of Education prepares students for professional
+              careers in teaching and educational leadership. Its programs
+              emphasize pedagogical theory, research, and practical application.
+              The college develops educators who are committed to academic
+              excellence and lifelong learning.
+            </p>
+          </div>
 
-        <h3>College of Nursing (CON)</h3>
-        <div>
-          <p>
-            The College of Nursing provides a scientific and ethical foundation
-            for professional nursing practice. It emphasizes evidence-based
-            patient care and clinical decision-making. The college prepares
-            competent nurses for diverse healthcare environments.
-          </p>
-        </div>
+          <h3>College of Nursing (CON)</h3>
+          <div>
+            <p>
+              The College of Nursing provides a scientific and ethical
+              foundation for professional nursing practice. It emphasizes
+              evidence-based patient care and clinical decision-making. The
+              college prepares competent nurses for diverse healthcare
+              environments.
+            </p>
+          </div>
 
-        <h3>College of Arts & Sciences (CAS)</h3>
-        <div>
-          <p>
-            The College of Arts and Sciences provides the core liberal arts and
-            sciences education for the university. It cultivates essential
-            skills in critical analysis, research, and communication. This
-            college forms the foundational preparation for advanced study and
-            professional life.
-          </p>
-        </div>
+          <h3>College of Arts & Sciences (CAS)</h3>
+          <div>
+            <p>
+              The College of Arts and Sciences provides the core liberal arts
+              and sciences education for the university. It cultivates essential
+              skills in critical analysis, research, and communication. This
+              college forms the foundational preparation for advanced study and
+              professional life.
+            </p>
+          </div>
 
-        <h3>College of Business & Accountancy (CBA)</h3>
-        <div>
-          <p>
-            The College of Business and Accountancy educates students in
-            business principles and financial management. It focuses on
-            strategic analysis, entrepreneurship, and ethical accounting
-            practices. The college prepares graduates for leadership in
-            corporate and commercial fields.
-          </p>
-        </div>
+          <h3>College of Business & Accountancy (CBA)</h3>
+          <div>
+            <p>
+              The College of Business and Accountancy educates students in
+              business principles and financial management. It focuses on
+              strategic analysis, entrepreneurship, and ethical accounting
+              practices. The college prepares graduates for leadership in
+              corporate and commercial fields.
+            </p>
+          </div>
 
-        <h3>College of Engineering (COE)</h3>
-        <div>
-          <p>
-            The College of Engineering educates students in the principles and
-            applications of engineering. The curriculum develops proficiency in
-            designing and managing complex technological systems. It produces
-            engineers equipped to address industrial and infrastructural
-            challenges.
-          </p>
-        </div>
+          <h3>College of Engineering (COE)</h3>
+          <div>
+            <p>
+              The College of Engineering educates students in the principles and
+              applications of engineering. The curriculum develops proficiency
+              in designing and managing complex technological systems. It
+              produces engineers equipped to address industrial and
+              infrastructural challenges.
+            </p>
+          </div>
 
-        <h3>College of International Hospitality Management (CIHM)</h3>
-        <div>
-          <p>
-            The College of International Hospitality Management specializes in
-            global tourism and service leadership. Its programs integrate
-            management theory with operational competencies for the hospitality
-            industry. The college develops professionals capable of managing
-            high-standard service enterprises.
-          </p>
+          <h3>College of International Hospitality Management (CIHM)</h3>
+          <div>
+            <p>
+              The College of International Hospitality Management specializes in
+              global tourism and service leadership. Its programs integrate
+              management theory with operational competencies for the
+              hospitality industry. The college develops professionals capable
+              of managing high-standard service enterprises.
+            </p>
+          </div>
         </div>
-      </div>
-              <div class="explore-button-container">
+        <div class="explore-button-container">
           <a href="Departments.html" class="explore-btn">
             Explore Programs
             <i class="fas fa-chevron-right"></i>
           </a>
         </div>
+      </div>
     </div>
-  </div>
     <div class="faq-section">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
@@ -279,7 +280,7 @@
             <p>
               The university offers undergraduate programs in Computer Studies,
               Education, Nursing, Arts and Sciences, Business and Accountancy,
-              Engineering, and International Hospitality Management.
+              Engineering, and Hospitality Management.
             </p>
           </div>
 
@@ -291,8 +292,7 @@
           <h3>Can I visit the campus?</h3>
           <div>
             <p>
-              Yes, campus tours are available Monday to Friday. Schedule through
-              our website.
+              Yes, campus tours are available Monday to Friday.
             </p>
           </div>
 
@@ -311,7 +311,7 @@
     <script>
       $(function () {
         const $container = $("#logoContainer");
-        const logoWidth = 240; // image + margin space
+        const logoWidth = 240;
         const totalLogos = $container.children().length;
         const visibleWidth = $container.outerWidth();
         const maxScroll = totalLogos * logoWidth - visibleWidth;
@@ -330,9 +330,7 @@
     <script>
       $(document).ready(function () {
         $(".accordion-container h3").click(function () {
-          // close others
           $(".accordion-container div").not($(this).next()).slideUp();
-          // toggle this one
           $(this).next().slideToggle();
         });
       });

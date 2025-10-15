@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
 
 * {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   box-sizing: border-box;
 }
 
@@ -14,7 +14,7 @@ body {
 
 section nav {
   display: flex;
-  justify-content: space-between; /* Changed from center */
+  justify-content: space-between; 
   align-items: center;
   position: fixed;
   top: 0;
@@ -22,11 +22,11 @@ section nav {
   background: white;
   box-shadow: 0 0 10px black;
   z-index: 1000;
-  padding: 10px 50px; /* Adjusted padding */
+  padding: 10px 50px; 
 }
 
 .nav-logo img {
-  height: 70px; /* Adjust based on your logo size */
+  height: 70px; 
   width: auto;
 }
 
@@ -52,17 +52,17 @@ section nav ul li a {
 }
 
 section nav ul li a:hover {
-  color:#004d00;
+  color: #004d00;
 }
 
 section nav ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color:#004d00;
+  background-color: #004d00;
   transition: width 0.3s ease;
 }
 
@@ -71,7 +71,7 @@ section nav ul li a:hover::after {
 }
 
 section nav ul li a.active {
-  color:#004d00;
+  color: #004d00;
 }
 
 section nav ul li a.active::after {
@@ -94,15 +94,15 @@ section nav ul li a.active::after {
 }
 
 .welcome-banner {
-  background-image: url('../pics/PLP-GIF2.gif');
-  background-size: cover;        
+  background-image: url("../pics/PLP-GIF2.gif");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
   color: white;
   border-radius: 0 0 8px 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 60px 20px;            
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px;
 }
 
 .welcome-banner h2 {
@@ -190,7 +190,8 @@ label {
   flex: 1;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 8px 10px;
   border: 1px solid #ddd;
@@ -199,7 +200,8 @@ input, textarea {
   transition: border 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
   border-color: darkgreen;
   box-shadow: 0 0 0 1px rgba(0, 100, 0, 0.2);
@@ -255,7 +257,7 @@ textarea {
 }
 .image-container {
   flex: 1;
-  background-image: url('../pics/plp-contact.jpg');
+  background-image: url("../pics/plp-contact.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -270,9 +272,8 @@ textarea {
   overflow: hidden;
 }
 
-
 .image-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -280,7 +281,7 @@ textarea {
   bottom: 0;
   background: rgba(56, 56, 56, 0.5);
   z-index: 1;
-} 
+}
 
 .image-container h2 {
   font-size: 28px;
@@ -299,7 +300,6 @@ textarea {
   margin-bottom: 10px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
-
 
 footer {
   background-color: #004d00;

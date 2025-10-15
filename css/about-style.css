@@ -24,7 +24,7 @@ body {
 
 section nav {
   display: flex;
-  justify-content: space-between; /* Changed from center */
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
@@ -32,11 +32,11 @@ section nav {
   background: white;
   box-shadow: 0 0 10px black;
   z-index: 1000;
-  padding: 10px 50px; /* Adjusted padding */
+  padding: 10px 50px;
 }
 
 .nav-logo img {
-  height: 70px; /* Adjust based on your logo size */
+  height: 70px;
   width: auto;
 }
 
@@ -62,17 +62,17 @@ section nav ul li a {
 }
 
 section nav ul li a:hover {
-  color:#004d00;
+  color: #004d00;
 }
 
 section nav ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color:#004d00;
+  background-color: #004d00;
   transition: width 0.3s ease;
 }
 
@@ -81,7 +81,7 @@ section nav ul li a:hover::after {
 }
 
 section nav ul li a.active {
-  color:#004d00;
+  color: #004d00;
 }
 
 section nav ul li a.active::after {
@@ -190,7 +190,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background:#004d00;
+  background: #004d00;
   padding: 40px 0;
   font-family: "Outfit", sans-serif;
   margin: 30px 0;
@@ -275,10 +275,10 @@ footer {
 .video-container {
   position: relative;
   width: 100%;
-  margin: 30px auto; 
+  margin: 30px auto;
   overflow: hidden;
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
