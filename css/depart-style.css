@@ -220,7 +220,6 @@ footer {
   content: "-";
 }
 
-/* Fix focus states */
 #departments-accordion .ui-accordion-header:focus,
 #departments-accordion .ui-accordion-header.ui-state-focus {
   background: darkgreen;
@@ -229,7 +228,23 @@ footer {
   border: 1px solid darkgreen;
 }
 
-/* Department Content */
+#departments-accordion .ui-accordion-header {
+    border-bottom: none !important;
+    margin: 0 !important;
+}
+
+#departments-accordion .ui-accordion-header:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+#departments-accordion .ui-accordion-header-active {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.ui-accordion .ui-accordion-header-icon {
+    display: none;
+}
+
 .department-header {
   display: flex;
   align-items: center;
@@ -260,7 +275,6 @@ footer {
   color: #333;
 }
 
-/* Department Tabs */
 .dept-tabs {
   width: 100%;
   margin: 0 auto;
@@ -342,15 +356,3 @@ footer {
   font-size: 18px;
 }
 
-#departments-accordion .ui-accordion-header {
-    border-bottom: none !important;
-    margin: 0 !important;
-}
-
-#departments-accordion .ui-accordion-header:not(:first-child) {
-    border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
-}
-
-#departments-accordion .ui-accordion-header-active {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
